@@ -1,0 +1,16 @@
+﻿<Window x:Class="Pedigree_Certification.Windows.ChooseParentWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Pedigree_Certification.Windows"
+        mc:Ignorable="d"
+        Title="ChooseParentWindow" Height="450" Width="800">
+    <StackPanel>
+        <Grid>
+        <Canvas>
+            <Image x:Name="front" Source="C:\Users\maksb\Source\Repos\Pedigree Certification\Pedigree Certification\Images\Kynologia_RODOWÓD.jpg" />
+        </Canvas>
+        </Grid>
+    </StackPanel>
+</Window>

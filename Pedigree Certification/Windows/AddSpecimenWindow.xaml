@@ -1,0 +1,124 @@
+﻿<Window x:Class="Pedigree_Certification.AddSpecimenWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Pedigree_Certification"
+        mc:Ignorable="d"
+        Title="AddSpecimenWindow" Height="670" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <StackPanel Margin="10" Grid.Column="0">
+            <TextBlock Text="Imię:" />
+            <TextBox BorderThickness="1" x:Name="DogName" Height="23" TextWrapping="Wrap" Text="" />
+            <TextBlock Text="Przydomek:" />
+            <TextBox BorderThickness="1" x:Name="Nickname" Height="23" TextWrapping="Wrap" Text="" />
+            <TextBlock Text="nr Chip/Tatuaż:" />
+            <TextBox BorderThickness="1" x:Name="ChipNumber" Height="23" TextWrapping="Wrap" Text="" />
+            <TextBlock Text="Numer rodowodu:" />
+            <TextBox BorderThickness="1" x:Name="PedegreeCertificateNumber" Height="23" TextWrapping="Wrap" Text="" />
+            <TextBlock Text="Data urodzenia:" />
+            <DatePicker x:Name="BirthDate" />
+            <TextBlock Text="Umaszczenie:" />
+            <TextBox BorderThickness="1" x:Name="Coat" Height="23" TextWrapping="Wrap" Text="" />
+            <TextBlock Text="Płeć:" />
+            <!--Zmienić na listę-->
+            <TextBox BorderThickness="1" x:Name="Sex" Height="23" TextWrapping="Wrap" Text="" />
+            <TextBlock Text="Dysplazja:" />
+            <TextBox BorderThickness="1" x:Name="Dysplasia" Height="23" TextWrapping="Wrap" Text="" />
+            <TextBlock Text="DNA:" />
+            <TextBox BorderThickness="1" x:Name="DNA" Height="23" TextWrapping="Wrap" Text="" />
+            <TextBlock Text="Tytuły wystawne:" />
+            <TextBox BorderThickness="1" x:Name="ExhibitionTitles" Height="39" TextWrapping="Wrap" Text="" Margin="0,0,-0.2,0" />
+            <TextBlock Text="Wyszkolenie:" />
+            <TextBox BorderThickness="1" x:Name="Training" Height="36" TextWrapping="Wrap" Text="" Margin="0,0,-0.2,0" />
+            <TextBlock Text="Data nadania uprawnień:" />
+            <DatePicker x:Name="CertificationDate" />
+            <TextBlock Text="Rasa:" />
+            <TextBox BorderThickness="1" x:Name="Rase" Height="23" TextWrapping="NoWrap" Text="" />
+            <TextBlock Text="Nr seryjny:" />
+            <Grid Margin="2">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <TextBlock Text="KP/R/" Grid.Column="0" VerticalAlignment="Center" TextAlignment="Center" />
+                <TextBox Grid.Column="1" Grid.ColumnSpan="9" BorderThickness="1" x:Name="CertificateNo" Height="23" TextWrapping="NoWrap" Text="" />
+            </Grid>
+        </StackPanel>
+        <StackPanel Margin="10" Grid.Column="1">
+            <TextBlock Text="Ojciec" FontSize="15" HorizontalAlignment="Center"/>
+            <Border BorderThickness="1" Padding="5">
+                <StackPanel>
+                    <TextBlock Text="Nr Chip:" />
+                    <TextBox BorderThickness="1" x:Name="FatherChipNumber" Height="23" TextWrapping="Wrap" Text="" TextChanged="FatherChipNumber_TextChanged" />
+                    <ComboBox x:Name="FatherChipCombobox" Margin="0,0,-0.2,0" Height="0" SelectionChanged="FatherChipCombobox_SelectionChanged"/>
+                    <TextBlock Text="Imię:" />
+                    <TextBox BorderThickness="1" x:Name="FatherName" Height="23" TextWrapping="Wrap" Text="" TextChanged="FatherName_TextChanged" />
+                    <ComboBox x:Name="FatherNameCombobox" Margin="0,0,-0.2,0" Height="0" SelectionChanged="FatherNameCombobox_SelectionChanged" />
+                    <TextBlock Text="Przydomek" />
+                    <TextBox BorderThickness="1" x:Name="FatherNickname" Height="23" TextWrapping="Wrap" Text="" TextChanged="FatherNickname_TextChanged" />
+                    <ComboBox x:Name="FatherNicknameCombobox" Margin="0,0,-0.2,0" Height="0" SelectionChanged="FatherNicknameCombobox_SelectionChanged"/>
+                </StackPanel>
+            </Border>
+            <TextBlock Text="Matka" FontSize="15" HorizontalAlignment="Center"/>
+            <Border BorderThickness="1" Padding="5">
+                <StackPanel>
+                    <TextBlock Text="Nr Chip:" />
+                    <TextBox BorderThickness="1" x:Name="MotherChipNumber" Height="23" TextWrapping="Wrap" Text="" TextChanged="MotherChipNumber_TextChanged" />
+                    <ComboBox x:Name="MotherChipCombobox" Margin="0,0,-0.2,0" Height="0" SelectionChanged="MotherChipCombobox_SelectionChanged" />
+                    <TextBlock Text="Imię:" />
+                    <TextBox BorderThickness="1" x:Name="MotherName" Height="23" TextWrapping="Wrap" Text="" TextChanged="MotherName_TextChanged" />
+                    <ComboBox x:Name="MotherNameCombobox" Margin="0,0,-0.2,0" Height="0" SelectionChanged="MotherNameCombobox_SelectionChanged"/>
+                    <TextBlock Text="Przydomek" />
+                    <TextBox BorderThickness="1" x:Name="MotherNickname" Height="23" TextWrapping="Wrap" Text="" TextChanged="MotherNickname_TextChanged" />
+                    <ComboBox x:Name="MotherNicknameCombobox" Margin="0,0,-0.2,0" Height="0" SelectionChanged="MotherNicknameCombobox_SelectionChanged"/>
+                </StackPanel>
+            </Border>
+            <TextBlock Text="Hodowca" FontSize="15" HorizontalAlignment="Center"/>
+            <Border BorderThickness="1" Padding="5">
+                <StackPanel>
+                    <TextBlock Text="Imię:" />
+                    <TextBox BorderThickness="1" x:Name="BreederName" Height="23" TextWrapping="Wrap" Text="" TextChanged="BreederName_TextChanged" />
+                    <ComboBox x:Name="BreederNameCombobox" Margin="0,0,-0.2,0" Height="0" SelectionChanged="BreederNameCombobox_SelectionChanged"/>
+                    <TextBlock Text="Nazwisko:" />
+                    <TextBox BorderThickness="1" x:Name="BreederSurname" Height="23" TextWrapping="Wrap" Text="" TextChanged="BreederSurname_TextChanged" />
+                    <ComboBox x:Name="BreederSurnameCombobox" Margin="0,0,-0.2,0" Height="0" SelectionChanged="BreederSurnameCombobox_SelectionChanged" />
+                </StackPanel>
+            </Border>
+            <TextBlock Text="Właściciel" FontSize="15" HorizontalAlignment="Center"/>
+            <Border BorderThickness="1" Padding="5">
+                <StackPanel>
+                    <TextBlock Text="Imię:" />
+                    <TextBox BorderThickness="1" x:Name="OwnerName" Height="23" TextWrapping="Wrap" Text="" TextChanged="OwnerName_TextChanged" />
+                    <ComboBox x:Name="OwnerNameCombobox" Margin="0,0,-0.2,0" Height="0" SelectionChanged="OwnerNameCombobox_SelectionChanged"/>
+                    <TextBlock Text="Nazwisko:" />
+                    <TextBox BorderThickness="1" x:Name="OwnerSurname" Height="23" TextWrapping="Wrap" Text="" TextChanged="OwnerSurname_TextChanged" />
+                    <ComboBox x:Name="OwnerSurnameCombobox" Margin="0,0,-0.2,0" Height="0" SelectionChanged="OwnerSurnameCombobox_SelectionChanged" />
+                    <TextBlock Text="Adress:" />
+                    <TextBox BorderThickness="1" x:Name="OwnerAdress" Height="50" TextWrapping="Wrap" Text="" TextChanged="OwnerAdress_TextChanged" />
+                    <ComboBox x:Name="OwnerAdressCombobox" Margin="0,0,-0.2,0" Height="0" SelectionChanged="OwnerAdressCombobox_SelectionChanged" />
+                </StackPanel>
+            </Border>
+            <Grid Margin="5">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Button Margin="5" x:Name="Save" Content="Zapisz osobnika" Grid.Column="0" Click="Save_Click" />
+                <Button Margin="5" x:Name="Back" Content="Powrót" Grid.Column="1" Click="Back_Click" />
+            </Grid>
+        </StackPanel>
+    </Grid>
+</Window>
